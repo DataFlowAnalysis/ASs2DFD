@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DataDictionaryCharacterized="http://palladiosimulator.org/dataflow/dictionary/characterized/1.0" xmlns:confidentiality="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0" xmlns:expression="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/expression" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_CenpUDgUEe6wuPntCaXN4Q">
+  <components__Repository xsi:type="repository:BasicComponent" id="_FI3pEDgUEe6wuPntCaXN4Q" entityName="BasicComponent1">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_F8b0ADgUEe6wuPntCaXN4Q" entityName="BasicComponent1.Interface1.OperationProvidedRole1" providedInterface__OperationProvidedRole="_FbOkYDgUEe6wuPntCaXN4Q"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_G9hdkDgUEe6wuPntCaXN4Q" describedService__SEFF="_GTtEgDgUEe6wuPntCaXN4Q">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_HOFpIDgUEe6wuPntCaXN4Q" successor_AbstractAction="_IusgQDgUEe6wuPntCaXN4Q"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_HOFpITgUEe6wuPntCaXN4Q" predecessor_AbstractAction="_IusgQDgUEe6wuPntCaXN4Q"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_IusgQDgUEe6wuPntCaXN4Q" entityName="SetVariableAction1" predecessor_AbstractAction="_HOFpIDgUEe6wuPntCaXN4Q" successor_AbstractAction="_HOFpITgUEe6wuPntCaXN4Q">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+            <specification_VariableCharacterisation specification="false"/>
+            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_HYDeYDs-Ee6iIue4ZJyNFQ">
+              <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="default.pddc#dictionary-characteristicTypes@0"/>
+              <literal href="default.pddc#dictionary-characteristicEnumerations@0.literals@0"/>
+            </lhs>
+            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_HYDeYTs-Ee6iIue4ZJyNFQ">
+              <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="default.pddc#dictionary-characteristicTypes@0"/>
+              <literal href="default.pddc#dictionary-characteristicEnumerations@0.literals@0"/>
+              <namedReference xsi:type="stoex:VariableReference" referenceName="parameter"/>
+            </rhs>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_FbOkYDgUEe6wuPntCaXN4Q" entityName="Interface1">
+    <signatures__OperationInterface id="_GTtEgDgUEe6wuPntCaXN4Q" entityName="method1">
+      <parameters__OperationSignature parameterName="parameter">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+</repository:Repository>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DiagramGenerator Tests
+Bundle-SymbolicName: org.palladiosimulator.dataflow.diagramgenerator.tests
+Bundle-Version: 1.0.0.qualifier
+Import-Package: org.junit.jupiter.api;version="5.9.1",
+ org.junit.jupiter.params;version="5.9.1",
+ org.junit.jupiter.params.provider;version="5.9.1"
+Require-Bundle: org.eclipse.core.runtime,
+ org.palladiosimulator.dataflow.diagramgenerator.testmodels;bundle-version="1.0.0",
+ org.palladiosimulator.dataflow.diagramgenerator;bundle-version="1.0.0",
+ org.palladiosimulator.dataflow.confidentiality.analysis;bundle-version="1.0.0",
+ edu.kit.kastel.dsis.uncertainty.impactanalysis;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: org.palladiosimulator.dataflow.diagramgenerator.tests

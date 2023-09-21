@@ -1,0 +1,8 @@
+dictionary id "dictionary"
+
+enum Test { 
+	A
+	B
+}
+
+enumCharacteristicType Test using Test

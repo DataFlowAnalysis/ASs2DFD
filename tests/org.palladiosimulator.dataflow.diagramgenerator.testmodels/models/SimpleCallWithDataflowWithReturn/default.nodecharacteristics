@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nodecharacteristics:Assignments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nodecharacteristics="http://www.example.org/nodeCharacteristics">
+  <assignee xsi:type="nodecharacteristics:RessourceAssignee">
+    <resourcecontainer href="default.resourceenvironment#_nWW7MDgWEe6wuPntCaXN4Q"/>
+  </assignee>
+</nodecharacteristics:Assignments>
