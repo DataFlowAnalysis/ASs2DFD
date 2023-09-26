@@ -13,6 +13,7 @@ import org.palladiosimulator.dataflow.confidentiality.analysis.characteristics.D
 import org.palladiosimulator.dataflow.confidentiality.analysis.entity.sequence.AbstractActionSequenceElement;
 import org.palladiosimulator.dataflow.confidentiality.analysis.entity.sequence.ActionSequence;
 import org.palladiosimulator.dataflow.diagramgenerator.GeneratorOptions;
+import org.palladiosimulator.dataflow.diagramgenerator.GraphProcessor;
 import org.palladiosimulator.dataflow.diagramgenerator.model.DataFlowElement;
 import org.palladiosimulator.dataflow.diagramgenerator.model.DataFlowElementVariable;
 import org.palladiosimulator.dataflow.diagramgenerator.model.DataFlowLiteral;
@@ -23,7 +24,7 @@ import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCha
 
 import dev.abunai.impact.analysis.model.impact.UncertaintyImpact;
 
-public class PCMGraphProcessor {
+public class PCMGraphProcessor implements GraphProcessor {
 	private final PCMDataFlowElementFactory elementCreator;
 	private final DataFlowNodeManager nodeManager;
 	private final Predicate<? super AbstractActionSequenceElement<?>> condition;

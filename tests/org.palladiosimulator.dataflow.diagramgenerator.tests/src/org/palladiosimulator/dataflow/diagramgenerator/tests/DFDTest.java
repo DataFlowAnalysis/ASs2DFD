@@ -5,6 +5,7 @@ import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 import org.junit.jupiter.api.Test;
+import org.palladiosimulator.dataflow.confidentiality.analysis.DataFlowConfidentialityAnalysis;
 import org.palladiosimulator.dataflow.confidentiality.analysis.builder.DataFlowAnalysisBuilder;
 import org.palladiosimulator.dataflow.confidentiality.analysis.builder.pcm.PCMDataFlowConfidentialityAnalysisBuilder;
 import org.palladiosimulator.dataflow.confidentiality.analysis.entity.sequence.AbstractActionSequenceElement;
@@ -20,9 +21,9 @@ import dev.abunai.impact.analysis.StandalonePCMUncertaintyImpactAnalysis;
 
 public class DFDTest {
 	public static String PROJECT_NAME = "org.palladiosimulator.dataflow.diagramgenerator.testmodels";
-	public static String USAGE_MODEL_PATH = "models/CoronaWarnApp_UncertaintyScenario1/default.usagemodel";
-	public static String ALLOCATION_PATH = "models/CoronaWarnApp_UncertaintyScenario1/default.allocation";
-	public static String CHARACTERISTICS_PATH = "models/CoronaWarnApp_UncertaintyScenario1/default.nodecharacteristics";
+	public static String USAGE_MODEL_PATH = "models/TravelPlannerNew/travelPlanner.usagemodel";
+	public static String ALLOCATION_PATH = "models/TravelPlannerNew/travelPlanner.allocation";
+	public static String CHARACTERISTICS_PATH = "models/TravelPlannerNew/travelPlanner.nodecharacteristics";
 
 	@Test
 	void runGeneratorWithModel() {
@@ -31,7 +32,7 @@ public class DFDTest {
 		options.setUsageModelPath(USAGE_MODEL_PATH);
 		options.setAllocationPath(ALLOCATION_PATH);
 		options.setCharacteristicsPath(CHARACTERISTICS_PATH);
-		options.setDrawControlFlow(true);
+		options.setDrawControlFlow(false); // IMPORTANT!!!
 		options.setDrawNodeCharacteristics(true);
 		options.setDrawVariables(true);
 		options.setDrawParameters(true);
@@ -43,24 +44,25 @@ public class DFDTest {
 		String allocationPath = options.getAllocationPath();
 		String characteristicsPath = options.getCharacteristicsPath();
 
-		StandalonePCMUncertaintyImpactAnalysis analysis = new DataFlowAnalysisBuilder().standalone()
-				.modelProjectName(projectName).useBuilder(new PCMDataFlowConfidentialityAnalysisBuilder())
-				.usePluginActivator(Activator.class).useUsageModel(usageModelPath).useAllocationModel(allocationPath)
-				.useNodeCharacteristicsModel(characteristicsPath).useBuilder(new PCMUncertaintyImpactAnalysisBuilder())
-				.build();
+		DataFlowConfidentialityAnalysis analysis = new DataFlowAnalysisBuilder().standalone()
+				.modelProjectName(PROJECT_NAME).useBuilder(new PCMDataFlowConfidentialityAnalysisBuilder())
+				.usePluginActivator(Activator.class).useUsageModel(USAGE_MODEL_PATH).useAllocationModel(ALLOCATION_PATH)
+				.useNodeCharacteristicsModel(CHARACTERISTICS_PATH).build();
 
 		try {
 			analysis.initializeAnalysis();
 		} catch (Exception e) {
-			analysis = new DataFlowAnalysisBuilder().standalone().modelProjectName(projectName)
-					.useBuilder(new PCMDataFlowConfidentialityAnalysisBuilder()).legacy()
-					.usePluginActivator(Activator.class).useUsageModel(usageModelPath)
-					.useAllocationModel(allocationPath).useBuilder(new PCMUncertaintyImpactAnalysisBuilder()).build();
+			analysis = new DataFlowAnalysisBuilder().standalone().modelProjectName(PROJECT_NAME)
+					.useBuilder(new PCMDataFlowConfidentialityAnalysisBuilder()).legacy() // DARUM HIER MIT LEGACY
+					.usePluginActivator(Activator.class).useUsageModel(USAGE_MODEL_PATH)
+					.useAllocationModel(ALLOCATION_PATH).useNodeCharacteristicsModel(CHARACTERISTICS_PATH).build();
 			analysis.initializeAnalysis();
 		}
 
-		analysis.getUncertaintySources().addConnectorUncertaintyInConnector("_w-qoYLNzEe2o46d27a6tVQ"); // S1_1
-		analysis.getUncertaintySources().addActorUncertaintyInResourceContainer("_E9SLkLN3Ee2o46d27a6tVQ"); // S1_2
+		// analysis.getUncertaintySources().addConnectorUncertaintyInConnector("_w-qoYLNzEe2o46d27a6tVQ");
+		// // S1_1
+		// analysis.getUncertaintySources().addActorUncertaintyInResourceContainer("_E9SLkLN3Ee2o46d27a6tVQ");
+		// // S1_2
 
 		PCMDiagramGenerator diagramGenerator = new PCMDiagramGenerator(options, analysis);
 
@@ -68,13 +70,7 @@ public class DFDTest {
 		PCMDataFlowElementFactory creator = PCMDataFlowElementFactory.getInstance();
 
 		Predicate<? super AbstractActionSequenceElement<?>> condition = it -> {
-
-			List<String> dataLiterals = it.getAllDataFlowVariables().stream().map(e -> e.getAllCharacteristics())
-					.flatMap(List::stream).map(e -> e.characteristicLiteral().getName()).toList();
-			List<String> nodeLiterals = it.getAllNodeCharacteristics().stream()
-					.map(e -> e.characteristicLiteral().getName()).toList();
-
-			return getConstraint().test(dataLiterals, nodeLiterals);
+			return false;
 		};
 
 		PCMGraphProcessor processor = new PCMGraphProcessor(creator, condition);

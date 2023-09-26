@@ -5,13 +5,13 @@ import org.palladiosimulator.dataflow.diagramgenerator.model.DataStoreDataFlowEl
 import org.palladiosimulator.dataflow.diagramgenerator.model.ExternalEntityDataFlowElement;
 import org.palladiosimulator.dataflow.diagramgenerator.model.ProcessDataFlowElement;
 
-import mdpa.dfd.dataflowdiagram.impl.ExternalImpl;
-import mdpa.dfd.dataflowdiagram.impl.NodeImpl;
-import mdpa.dfd.dataflowdiagram.impl.ProcessImpl;
-import mdpa.dfd.dataflowdiagram.impl.StoreImpl;
+import mdpa.dfd.dataflowdiagram.External;
+import mdpa.dfd.dataflowdiagram.Node;
+import mdpa.dfd.dataflowdiagram.Process;
+import mdpa.dfd.dataflowdiagram.Store;
 import mdpa.dfd.dataflowdiagram.impl.dataflowdiagramFactoryImpl;
 
-public class DFDDataFlowElementVisitor implements DataFlowElementVisitor<NodeImpl> {
+public class DFDDataFlowElementVisitor implements DataFlowElementVisitor<Node> {
 	private dataflowdiagramFactoryImpl dfdFactory;
 
 	public DFDDataFlowElementVisitor() {
@@ -19,8 +19,8 @@ public class DFDDataFlowElementVisitor implements DataFlowElementVisitor<NodeImp
 	}
 
 	@Override
-	public NodeImpl visit(ProcessDataFlowElement element) {
-		ProcessImpl dfdProcess = (ProcessImpl) this.dfdFactory.createProcess();
+	public Node visit(ProcessDataFlowElement element) {
+		Process dfdProcess = (Process) this.dfdFactory.createProcess();
 		dfdProcess.setEntityName(element.getName());
 		dfdProcess.setId(element.getId());
 
@@ -28,20 +28,20 @@ public class DFDDataFlowElementVisitor implements DataFlowElementVisitor<NodeImp
 	}
 
 	@Override
-	public NodeImpl visit(ExternalEntityDataFlowElement element) {
-		ExternalImpl dfdExternal = (ExternalImpl) this.dfdFactory.createExternal();
+	public Node visit(ExternalEntityDataFlowElement element) {
+		External dfdExternal = (External) this.dfdFactory.createExternal();
 		dfdExternal.setEntityName(element.getName());
 		dfdExternal.setId(element.getId());
-		
+
 		return dfdExternal;
 	}
 
 	@Override
-	public NodeImpl visit(DataStoreDataFlowElement element) {
-		StoreImpl dfdStore = (StoreImpl) this.dfdFactory.createStore();
+	public Node visit(DataStoreDataFlowElement element) {
+		Store dfdStore = (Store) this.dfdFactory.createStore();
 		dfdStore.setEntityName(element.getName());
 		dfdStore.setId(element.getId());
-		
+
 		return dfdStore;
 	}
 
