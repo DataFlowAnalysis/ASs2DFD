@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:confidentiality="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://palladiosimulator.org/PalladioComponentModel/Parameter/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:repository_1="http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/repository" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" xmlns:usagemodel="http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2 http://palladiosimulator.org/PalladioComponentModel/5.2#//allocation http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2 http://palladiosimulator.org/PalladioComponentModel/5.2#//core/composition http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://palladiosimulator.org/PalladioComponentModel/Parameter/5.2 http://palladiosimulator.org/PalladioComponentModel/5.2#//parameter http://palladiosimulator.org/PalladioComponentModel/Repository/5.2 http://palladiosimulator.org/PalladioComponentModel/5.2#//repository http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0/repository http://palladiosimulator.org/dataflow/confidentiality/pcm/0.1.0#//repository http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2 http://palladiosimulator.org/PalladioComponentModel/5.2#//resourceenvironment http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2 http://palladiosimulator.org/PalladioComponentModel/5.2#//seff http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style http://palladiosimulator.org/PalladioComponentModel/System/5.2 http://palladiosimulator.org/PalladioComponentModel/5.2#//system http://palladiosimulator.org/PalladioComponentModel/UsageModel/5.2 http://palladiosimulator.org/PalladioComponentModel/5.2#//usagemodel">
-  <viewpoint:DAnalysis uid="_IhVYgPVdEeuMKba1Qn68bg" selectedViews="_K37ccPVdEeuMKba1Qn68bg _K5Q5MPVdEeuMKba1Qn68bg _Pkq4YPVdEeuMKba1Qn68bg __4O_QPVdEeuMKba1Qn68bg _GV3KAPVeEeuMKba1Qn68bg _81F3APVgEeuMKba1Qn68bg _IUDNoPVhEeuMKba1Qn68bg _NTWZMPVhEeuMKba1Qn68bg" version="15.2.0.202303281325">
+  <viewpoint:DAnalysis uid="_IhVYgPVdEeuMKba1Qn68bg" selectedViews="_K37ccPVdEeuMKba1Qn68bg _K5Q5MPVdEeuMKba1Qn68bg _Pkq4YPVdEeuMKba1Qn68bg __4O_QPVdEeuMKba1Qn68bg _GV3KAPVeEeuMKba1Qn68bg _81F3APVgEeuMKba1Qn68bg _IUDNoPVhEeuMKba1Qn68bg _NTWZMPVhEeuMKba1Qn68bg" version="15.0.0.202209061200">
     <semanticResources>pathmap://PCM_MODELS/Palladio.resourcetype</semanticResources>
     <semanticResources>pathmap://PCM_MODELS/PrimitiveTypes.repository</semanticResources>
     <semanticResources>pathmap://PCM_MODELS/FailureTypes.repository</semanticResources>
     <semanticResources>platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.model.profile/profile.emfprofile_diagram</semanticResources>
+    <semanticResources>travelPlanner.allocation</semanticResources>
     <semanticResources>travelPlanner.resourceenvironment</semanticResources>
     <semanticResources>travelPlanner.repository</semanticResources>
     <semanticResources>travelPlanner.system</semanticResources>
     <semanticResources>travelPlanner.usagemodel</semanticResources>
     <semanticResources>travelPlanner.DCPDSL</semanticResources>
     <semanticResources>travelPlanner.pddc</semanticResources>
+    <semanticResources>travelPlanner.nodecharacteristics</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_K37ccPVdEeuMKba1Qn68bg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']"/>
     </ownedViews>
@@ -19,82 +21,82 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_Pkq4YPVdEeuMKba1Qn68bg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.repository/description/repository.odesign#//@ownedViewpoints[name='Repository']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_PnT8sPVdEeuMKba1Qn68bg" name="TravelPlanner Repository Diagram" repPath="#_PlND4PVdEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_PnT8sPVdEeuMKba1Qn68bg" name="TravelPlanner Repository Diagram" repPath="#_PlND4PVdEeuMKba1Qn68bg" changeId="6539dccd-2b67-4230-bbfe-b8aa446c66ec">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.repository/description/repository.odesign#//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']"/>
         <target xmi:type="repository:Repository" href="travelPlanner.repository#_PGFe8PVdEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="__4O_QPVdEeuMKba1Qn68bg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.assembly/description/assembly.odesign#//@ownedViewpoints[name='Assembly']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="__41cMfVdEeuMKba1Qn68bg" name="CompositeComponent Diagram" repPath="#__4tgYPVdEeuMKba1Qn68bg" changeId="1691737695801">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="__41cMfVdEeuMKba1Qn68bg" name="CompositeComponent Diagram" repPath="#__4tgYPVdEeuMKba1Qn68bg" changeId="51d1db2b-242a-4bd0-8ba7-766b22d82a86">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.assembly/description/assembly.odesign#//@ownedViewpoints[name='Assembly']/@ownedRepresentations[name='Assembly%20Diagram']"/>
         <target xmi:type="repository:CompositeComponent" href="travelPlanner.repository#__4HqgPVdEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_pw1N0fVeEeuMKba1Qn68bg" name="CompositeComponent Diagram" repPath="#_pwz_sPVeEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_pw1N0fVeEeuMKba1Qn68bg" name="CompositeComponent Diagram" repPath="#_pwz_sPVeEeuMKba1Qn68bg" changeId="1a6a3eca-cb94-4a86-acdb-7300402e3bc9">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.assembly/description/assembly.odesign#//@ownedViewpoints[name='Assembly']/@ownedRepresentations[name='Assembly%20Diagram']"/>
         <target xmi:type="repository:CompositeComponent" href="travelPlanner.repository#_pwyxkPVeEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_c2Qi4PVgEeuMKba1Qn68bg" name="TravelPlanner System Diagram" repPath="#_c2OGoPVgEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_c2Qi4PVgEeuMKba1Qn68bg" name="TravelPlanner System Diagram" repPath="#_c2OGoPVgEeuMKba1Qn68bg" changeId="d954cd68-c8db-45f9-b9ec-b71714f25f66">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.assembly/description/assembly.odesign#//@ownedViewpoints[name='Assembly']/@ownedRepresentations[name='Assembly%20Diagram']"/>
         <target xmi:type="system:System" href="travelPlanner.system#_bOLKwPVgEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_GV3KAPVeEeuMKba1Qn68bg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GWT18fVeEeuMKba1Qn68bg" name="&lt;CreditCardCenterLogic>&lt;declassifyForAirline> SEFF Diagram" repPath="#_GWOWYPVeEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_GWT18fVeEeuMKba1Qn68bg" name="&lt;CreditCardCenterLogic>&lt;declassifyForAirline> SEFF Diagram" repPath="#_GWOWYPVeEeuMKba1Qn68bg" changeId="b078561f-587b-4a31-a2aa-e2c8bef96fc6">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="travelPlanner.repository#_GVzfoPVeEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vovcYfVeEeuMKba1Qn68bg" name="&lt;AirlineLogic>&lt;book> SEFF Diagram" repPath="#_vosZEPVeEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vovcYfVeEeuMKba1Qn68bg" name="&lt;AirlineLogic>&lt;book> SEFF Diagram" repPath="#_vosZEPVeEeuMKba1Qn68bg" changeId="a09cab2b-26f1-4313-8194-010b33ec8e5f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="travelPlanner.repository#_vorK8PVeEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_1j-EsfVeEeuMKba1Qn68bg" name="&lt;AirlineLogic>&lt;findFlights> SEFF Diagram" repPath="#_1j3-EPVeEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_1j-EsfVeEeuMKba1Qn68bg" name="&lt;AirlineLogic>&lt;findFlights> SEFF Diagram" repPath="#_1j3-EPVeEeuMKba1Qn68bg" changeId="41486548-eb30-4c52-b371-a4e7a88ff244">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="travelPlanner.repository#_1jyegPVeEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="__Y2fIfVeEeuMKba1Qn68bg" name="&lt;TravelPlanner>&lt;book> SEFF Diagram" repPath="#__Y0C4PVeEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="__Y2fIfVeEeuMKba1Qn68bg" name="&lt;TravelPlanner>&lt;book> SEFF Diagram" repPath="#__Y0C4PVeEeuMKba1Qn68bg" changeId="bf4861b1-3668-4412-bd18-09f5d85bc306">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="travelPlanner.repository#__YyNsPVeEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BvowUfVfEeuMKba1Qn68bg" name="&lt;TravelPlanner>&lt;findFlights> SEFF Diagram" repPath="#_BvmUEPVfEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_BvowUfVfEeuMKba1Qn68bg" name="&lt;TravelPlanner>&lt;findFlights> SEFF Diagram" repPath="#_BvmUEPVfEeuMKba1Qn68bg" changeId="4988c733-5fda-4350-9223-df5938a3a4f3">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="travelPlanner.repository#_Bvke4PVfEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_lfna0fVfEeuMKba1Qn68bg" name="&lt;FlightDB>&lt;add> SEFF Diagram" repPath="#_lfkXgPVfEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_lfna0fVfEeuMKba1Qn68bg" name="&lt;FlightDB>&lt;add> SEFF Diagram" repPath="#_lfkXgPVfEeuMKba1Qn68bg" changeId="c1b23524-1f81-4cfd-aaac-17d4d4b4c495">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="travelPlanner.repository#_lLKNwPVfEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mEC9kfVfEeuMKba1Qn68bg" name="&lt;FlightDB>&lt;get> SEFF Diagram" repPath="#_mEBIYPVfEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_mEC9kfVfEeuMKba1Qn68bg" name="&lt;FlightDB>&lt;get> SEFF Diagram" repPath="#_mEBIYPVfEeuMKba1Qn68bg" changeId="07c90bcb-9c0a-4abf-a837-211fc33bc3bd">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="travelPlanner.repository#_lzjqgPVfEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nI5FwfVfEeuMKba1Qn68bg" name="&lt;CreditCardDataDB>&lt;add> SEFF Diagram" repPath="#_nI2pgPVfEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nI5FwfVfEeuMKba1Qn68bg" name="&lt;CreditCardDataDB>&lt;add> SEFF Diagram" repPath="#_nI2pgPVfEeuMKba1Qn68bg" changeId="a2e3a253-d9a7-4762-9648-fbe5fb968555">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="travelPlanner.repository#_mz3Q8PVfEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nygqgfVfEeuMKba1Qn68bg" name="&lt;CreditCardDataDB>&lt;get> SEFF Diagram" repPath="#_nydAIPVfEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nygqgfVfEeuMKba1Qn68bg" name="&lt;CreditCardDataDB>&lt;get> SEFF Diagram" repPath="#_nydAIPVfEeuMKba1Qn68bg" changeId="c44c9a46-2dca-48b5-8f60-bedb28368e0a">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']"/>
         <target xmi:type="seff:ResourceDemandingSEFF" href="travelPlanner.repository#_nh9GAPVfEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_81F3APVgEeuMKba1Qn68bg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.resourceenvironment/description/resourceenvironment.odesign#//@ownedViewpoints[name='ResourceEnvironment']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_81xMcfVgEeuMKba1Qn68bg" name="TravelPlanner ResourceEnvironment Diagram" repPath="#_81tiEPVgEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_81xMcfVgEeuMKba1Qn68bg" name="TravelPlanner ResourceEnvironment Diagram" repPath="#_81tiEPVgEeuMKba1Qn68bg" changeId="5e4fbc5d-fe90-4596-9758-2e258d7c8b9a">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.resourceenvironment/description/resourceenvironment.odesign#//@ownedViewpoints[name='ResourceEnvironment']/@ownedRepresentations[name='ResourceEnvironment%20Diagram']"/>
         <target xmi:type="resourceenvironment:ResourceEnvironment" href="travelPlanner.resourceenvironment#/0"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_IUDNoPVhEeuMKba1Qn68bg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.allocation/description/allocation.odesign#//@ownedViewpoints[name='Allocation']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_IUvxMfVhEeuMKba1Qn68bg" name="TravelPlanner Allocation Diagram" repPath="#_IUvKIPVhEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_IUvxMfVhEeuMKba1Qn68bg" name="TravelPlanner Allocation Diagram" repPath="#_IUvKIPVhEeuMKba1Qn68bg" changeId="b8a010da-4ac2-4372-bba3-10363bd0c109">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.allocation/description/allocation.odesign#//@ownedViewpoints[name='Allocation']/@ownedRepresentations[name='Allocation%20Diagram']"/>
         <target xmi:type="allocation:Allocation" href="travelPlanner.allocation#_EUBGsPVhEeuMKba1Qn68bg"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_NTWZMPVhEeuMKba1Qn68bg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.palladiosimulator.editors.sirius.usage/description/usage.odesign#//@ownedViewpoints[name='UsageModel']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NUUpkfVhEeuMKba1Qn68bg" name="TravelPlanner UsageModel Diagram" repPath="#_NUQ_MPVhEeuMKba1Qn68bg" changeId="1691737129246">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_NUUpkfVhEeuMKba1Qn68bg" name="TravelPlanner UsageModel Diagram" repPath="#_NUQ_MPVhEeuMKba1Qn68bg" changeId="f631fa65-e71b-45e9-bf1d-dd31b426c394">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.usage/description/usage.odesign#//@ownedViewpoints[name='UsageModel']/@ownedRepresentations[name='UsageModel%20Diagram']"/>
         <target xmi:type="usagemodel:UsageModel" href="travelPlanner.usagemodel#/0"/>
       </ownedRepresentationDescriptors>
@@ -1592,7 +1594,7 @@
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="__46UsPVdEeuMKba1Qn68bg" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.assembly/description/assembly.odesign#//@ownedViewpoints[name='Assembly']/@ownedRepresentations[name='Assembly%20Diagram']/@defaultLayer/@containerMappings[name='ComposedProvidingRequiringEntity%20Node']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20Assembly']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.assembly']/@containerMappings[name='ComposedProvidingRequiringEntity%20Node']"/>
+      <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.indirections.editor.sirius/description/indirections.odesign#//@ownedViewpoints[name='PCM-Indirections']/@ownedRepresentationExtensions[name='PCM%20Indirections%20Assembly']/@layers[name='org.palladiosimulator.indirections.editor.sirius.Indirections.assembly']/@containerMappings[name='ComposedProvidingRequiringEntity%20Node']"/>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_QXJBsPVeEeuMKba1Qn68bg" name="&lt;&lt;AssemblyContext>>&#xA;Assembly_CreditCardDataDB">
         <target xmi:type="composition:AssemblyContext" href="travelPlanner.repository#_PxCrAPVeEeuMKba1Qn68bg"/>
         <semanticElements xmi:type="composition:AssemblyContext" href="travelPlanner.repository#_PxCrAPVeEeuMKba1Qn68bg"/>
@@ -1613,7 +1615,7 @@
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_QXKP0PVeEeuMKba1Qn68bg" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.assembly/description/assembly.odesign#//@ownedViewpoints[name='Assembly']/@ownedRepresentations[name='Assembly%20Diagram']/@defaultLayer/@containerMappings[name='ComposedProvidingRequiringEntity%20Node']/@subContainerMappings[name='AssemblyContext%20Container']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20Assembly']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.assembly']/@containerMappings[name='ComposedProvidingRequiringEntity%20Node']/@subContainerMappings[name='AssemblyContext%20Container']"/>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.indirections.editor.sirius/description/indirections.odesign#//@ownedViewpoints[name='PCM-Indirections']/@ownedRepresentationExtensions[name='PCM%20Indirections%20Assembly']/@layers[name='org.palladiosimulator.indirections.editor.sirius.Indirections.assembly']/@containerMappings[name='ComposedProvidingRequiringEntity%20Node']/@subContainerMappings[name='AssemblyContext%20Container']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_RAIUUPVeEeuMKba1Qn68bg" name="&lt;&lt;AssemblyContext>>&#xA;Assembly_CreditCardCenterLogic">
         <target xmi:type="composition:AssemblyContext" href="travelPlanner.repository#_Qs_V4PVeEeuMKba1Qn68bg"/>
@@ -1646,7 +1648,7 @@
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_RAIUUfVeEeuMKba1Qn68bg" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.assembly/description/assembly.odesign#//@ownedViewpoints[name='Assembly']/@ownedRepresentations[name='Assembly%20Diagram']/@defaultLayer/@containerMappings[name='ComposedProvidingRequiringEntity%20Node']/@subContainerMappings[name='AssemblyContext%20Container']/@style"/>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20Assembly']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.assembly']/@containerMappings[name='ComposedProvidingRequiringEntity%20Node']/@subContainerMappings[name='AssemblyContext%20Container']"/>
+        <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.indirections.editor.sirius/description/indirections.odesign#//@ownedViewpoints[name='PCM-Indirections']/@ownedRepresentationExtensions[name='PCM%20Indirections%20Assembly']/@layers[name='org.palladiosimulator.indirections.editor.sirius.Indirections.assembly']/@containerMappings[name='ComposedProvidingRequiringEntity%20Node']/@subContainerMappings[name='AssemblyContext%20Container']"/>
       </ownedDiagramElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Uuk8APVeEeuMKba1Qn68bg" sourceNode="_RAJicPVeEeuMKba1Qn68bg" targetNode="_QXVO8PVeEeuMKba1Qn68bg">
@@ -1681,7 +1683,6 @@
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.palladiosimulator.editors.sirius.assembly/description/assembly.odesign#//@ownedViewpoints[name='Assembly']/@ownedRepresentations[name='Assembly%20Diagram']/@defaultLayer"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.palladiosimulator.editors.sirius.assembly/description/assembly.odesign#//@ownedViewpoints[name='Assembly']/@ownedRepresentations[name='Assembly%20Diagram']/@additionalLayers[name='QoS']"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.palladiosimulator.indirections.editor.sirius/description/indirections.odesign#//@ownedViewpoints[name='PCM-Indirections']/@ownedRepresentationExtensions[name='PCM%20Indirections%20Assembly']/@layers[name='org.palladiosimulator.indirections.editor.sirius.Indirections.assembly']"/>
-    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20Assembly']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.assembly']"/>
     <target xmi:type="repository:CompositeComponent" href="travelPlanner.repository#__4HqgPVdEeuMKba1Qn68bg"/>
   </diagram:DSemanticDiagram>
   <diagram:DSemanticDiagram uid="_GWOWYPVeEeuMKba1Qn68bg">
@@ -2994,12 +2995,25 @@
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_hC7VMfXwEeut8bxiE9EShA" fontName="Cantarell" fontHeight="8"/>
                   <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hC7VMvXwEeut8bxiE9EShA" x="18" y="16"/>
                 </children>
+                <children xmi:type="notation:Node" xmi:id="_oEd8sF3ZEe6xwc31qcdvow" type="3009" element="_oDba4F3ZEe6xwc31qcdvow">
+                  <children xmi:type="notation:Node" xmi:id="_oEpi4F3ZEe6xwc31qcdvow" type="5004"/>
+                  <children xmi:type="notation:Node" xmi:id="_oEr_IF3ZEe6xwc31qcdvow" type="7003">
+                    <children xmi:type="notation:Node" xmi:id="_s5_hMF3ZEe6xwc31qcdvow" type="3010" element="_s4XJgF3ZEe6xwc31qcdvow">
+                      <styles xmi:type="notation:FontStyle" xmi:id="_s5_hMV3ZEe6xwc31qcdvow" fontName="Segoe UI" fontHeight="8"/>
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_s5_hMl3ZEe6xwc31qcdvow"/>
+                    </children>
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_oEr_IV3ZEe6xwc31qcdvow"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_oEr_Il3ZEe6xwc31qcdvow"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_oEd8sV3ZEe6xwc31qcdvow" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oEd8sl3ZEe6xwc31qcdvow" x="144" y="27"/>
+                </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_eMYWYvViEeuMKba1Qn68bg"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_eMYWY_ViEeuMKba1Qn68bg"/>
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_eMYWZPViEeuMKba1Qn68bg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_eMXvWPViEeuMKba1Qn68bg" fontName="Cantarell" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMXvWfViEeuMKba1Qn68bg" height="82"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMXvWfViEeuMKba1Qn68bg" width="494" height="124"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_eMYWZfViEeuMKba1Qn68bg" type="3008" element="_eKjxefViEeuMKba1Qn68bg">
               <children xmi:type="notation:Node" xmi:id="_eMYWaPViEeuMKba1Qn68bg" type="5005"/>
@@ -3015,14 +3029,14 @@
                     <styles xmi:type="notation:FilteringStyle" xmi:id="_jYPmxvXwEeut8bxiE9EShA"/>
                   </children>
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_jYPmwfXwEeut8bxiE9EShA" fontName="Cantarell" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jYPmwvXwEeut8bxiE9EShA" x="31" y="30"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jYPmwvXwEeut8bxiE9EShA" x="30" y="28"/>
                 </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_eMYWavViEeuMKba1Qn68bg"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_eMYWa_ViEeuMKba1Qn68bg"/>
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_eMYWbPViEeuMKba1Qn68bg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_eMYWZvViEeuMKba1Qn68bg" fontName="Cantarell" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMYWZ_ViEeuMKba1Qn68bg" y="82" height="84"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eMYWZ_ViEeuMKba1Qn68bg" y="124" width="494" height="124"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_eMXvVfViEeuMKba1Qn68bg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_eMXvVvViEeuMKba1Qn68bg"/>
@@ -3067,7 +3081,7 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_iFR6kvViEeuMKba1Qn68bg" fontName="Cantarell" fontHeight="8"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iFR6k_ViEeuMKba1Qn68bg" points="[0, 0, -15, -130]$[14, 126, -1, -4]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iFShoPViEeuMKba1Qn68bg" id="(0.5,1.0)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iFShofViEeuMKba1Qn68bg" id="(0.45901639344262296,0.026875857459457555)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iFShofViEeuMKba1Qn68bg" id="(0.2165520888418826,0.019505220965559497)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_jKGNkPViEeuMKba1Qn68bg" type="4001" element="_jJZC-PViEeuMKba1Qn68bg" source="_f8nk8PViEeuMKba1Qn68bg" target="_Bvrzp_VfEeuMKba1Qn68bg">
           <children xmi:type="notation:Node" xmi:id="_jKGNlPViEeuMKba1Qn68bg" type="6001">
@@ -3098,7 +3112,7 @@
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_iq7lUfViEeuMKba1Qn68bg"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_iq7lUvViEeuMKba1Qn68bg" fontName="Cantarell" fontHeight="8"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iq7lU_ViEeuMKba1Qn68bg" points="[0, 0, 12, -217]$[-12, 217, 0, 0]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iq7lWvViEeuMKba1Qn68bg" id="(0.5,0.880184331797235)"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iq7lWvViEeuMKba1Qn68bg" id="(0.23588709677419356,0.6387959866220736)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iq7lW_ViEeuMKba1Qn68bg" id="(0.5,0.0)"/>
         </edges>
       </data>
@@ -3164,6 +3178,25 @@
             <target xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="travelPlanner.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.0/@variableCharacterisation_VariableUsage.0"/>
             <semanticElements xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="travelPlanner.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.0/@variableCharacterisation_VariableUsage.0"/>
             <ownedStyle xmi:type="diagram:Square" uid="_ikFl8PXwEeut8bxiE9EShA" showIcon="false" labelPosition="node" color="209,209,209">
+              <description xmi:type="style:SquareDescription" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@subNodeMappings[name='ConfidentialityVariableCharacterisationInput']/@style"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@subNodeMappings[name='ConfidentialityVariableCharacterisationInput']"/>
+          </ownedElements>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_oDba4F3ZEe6xwc31qcdvow" name="test">
+          <target xmi:type="parameter:VariableUsage" href="travelPlanner.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.1"/>
+          <semanticElements xmi:type="parameter:VariableUsage" href="travelPlanner.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_oDeeMF3ZEe6xwc31qcdvow" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" backgroundColor="136,136,136" foregroundColor="136,136,136">
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.palladiosimulator.editors.sirius.seff/description/seff.odesign#//@ownedViewpoints[name='Seff']/@ownedRepresentations[name='Seff%20Diagram']/@defaultLayer/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMappingImport" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']"/>
+          <ownedElements xmi:type="diagram:DNodeListElement" uid="_s4XJgF3ZEe6xwc31qcdvow" name="test.AssignedRoles.User := query.AssignedRoles.User">
+            <target xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="travelPlanner.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.1/@variableCharacterisation_VariableUsage.0"/>
+            <semanticElements xmi:type="confidentiality:ConfidentialityVariableCharacterisation" href="travelPlanner.repository#//@components__Repository.6/@serviceEffectSpecifications__BasicComponent.1/@steps_Behaviour.2/@inputVariableUsages__CallAction.1/@variableCharacterisation_VariableUsage.0"/>
+            <ownedStyle xmi:type="diagram:Square" uid="_s4fsYF3ZEe6xwc31qcdvow" showIcon="false" labelPosition="node" color="209,209,209">
               <description xmi:type="style:SquareDescription" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@subNodeMappings[name='ConfidentialityVariableCharacterisationInput']/@style"/>
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius/description/sirius.odesign#//@ownedViewpoints[name='PCM-Confidentiality']/@ownedRepresentationExtensions[name='PCM%20Confidentiality%20SEFF']/@layers[name='org.palladiosimulator.dataflow.confidentiality.pcm.editor.sirius.seff']/@containerMappings[name='ExternalCallAction']/@subContainerMappings[name='InputVariableUsageCompartment']/@subContainerMappings[name='InputVariableUsage']/@subNodeMappings[name='ConfidentialityVariableCharacterisationInput']"/>

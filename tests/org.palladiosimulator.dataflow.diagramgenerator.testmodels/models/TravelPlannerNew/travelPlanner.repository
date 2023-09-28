@@ -195,6 +195,21 @@
           </variableCharacterisation_VariableUsage>
           <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="query"/>
         </inputVariableUsages__CallAction>
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
+            <specification_VariableCharacterisation specification="false"/>
+            <lhs xsi:type="expression:LhsEnumCharacteristicReference" id="_s3b8cF3ZEe6xwc31qcdvow">
+              <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelPlanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@1"/>
+              <literal href="travelPlanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+            </lhs>
+            <rhs xsi:type="expression:NamedEnumCharacteristicReference" id="_s3b8cV3ZEe6xwc31qcdvow">
+              <characteristicType xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelPlanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@1"/>
+              <literal href="travelPlanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+              <namedReference xsi:type="stoex:VariableReference" referenceName="query"/>
+            </rhs>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="test"/>
+        </inputVariableUsages__CallAction>
         <returnVariableUsage__CallReturnAction>
           <variableCharacterisation_VariableUsage xsi:type="confidentiality:ConfidentialityVariableCharacterisation">
             <specification_VariableCharacterisation specification="false"/>

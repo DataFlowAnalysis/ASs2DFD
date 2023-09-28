@@ -4,18 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
+import org.palladiosimulator.dataflow.confidentiality.analysis.characteristics.CharacteristicValue;
 import org.palladiosimulator.dataflow.confidentiality.analysis.entity.pcm.seff.SEFFActionSequenceElement;
 import org.palladiosimulator.dataflow.confidentiality.analysis.entity.sequence.AbstractActionSequenceElement;
 import org.palladiosimulator.dataflow.confidentiality.pcm.model.confidentiality.ConfidentialityVariableCharacterisation;
+import org.palladiosimulator.dataflow.confidentiality.pcm.model.confidentiality.dictionary.PCMDataDictionary;
 import org.palladiosimulator.dataflow.confidentiality.pcm.model.confidentiality.expression.LhsEnumCharacteristicReference;
 import org.palladiosimulator.dataflow.confidentiality.pcm.model.confidentiality.expression.NamedEnumCharacteristicReference;
 import org.palladiosimulator.dataflow.confidentiality.pcm.model.confidentiality.expression.VariableCharacterizationLhs;
 import org.palladiosimulator.dataflow.diagramgenerator.model.DataFlowElement;
+import org.palladiosimulator.dataflow.diagramgenerator.model.DataFlowElementVariable;
 import org.palladiosimulator.dataflow.diagramgenerator.model.DataFlowLiteral;
 import org.palladiosimulator.dataflow.diagramgenerator.model.DataFlowNode;
 import org.palladiosimulator.dataflow.diagramgenerator.model.DrawingStrategy;
 import org.palladiosimulator.dataflow.diagramgenerator.model.Flow;
 import org.palladiosimulator.dataflow.diagramgenerator.pcm.PCMOriginalSourceElement;
+import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.CharacteristicType;
+import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.EnumCharacteristicType;
+import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.Enumeration;
+import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.Literal;
 import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.expressions.And;
 import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.expressions.Term;
 import org.palladiosimulator.dataflow.dictionary.characterized.DataDictionaryCharacterized.expressions.True;
@@ -28,6 +35,7 @@ import org.palladiosimulator.pcm.seff.ExternalCallAction;
 import org.palladiosimulator.pcm.seff.SetVariableAction;
 import org.palladiosimulator.pcm.seff.StartAction;
 
+import mdpa.dfd.datadictionary.Assignment;
 import mdpa.dfd.datadictionary.Behaviour;
 import mdpa.dfd.datadictionary.Label;
 import mdpa.dfd.datadictionary.LabelType;
@@ -47,6 +55,59 @@ public class DFDDrawingStrategy implements DrawingStrategy {
 		List<LabelType> labelTypes = new ArrayList<>();
 		List<Label> labels = new ArrayList<>();
 
+		// Extract first node that has literals
+		DataFlowNode dings = null;
+		for (DataFlowNode node : dataFlowNodes) {
+			if (node.getLiterals().size() > 0) {
+				dings = node;
+				break;
+			}
+		}
+
+		AbstractActionSequenceElement<?> ogElement = (AbstractActionSequenceElement<?>) dings.getOriginalSource()
+				.getOriginalElement();
+
+		CharacteristicValue charac = ogElement.getAllNodeCharacteristics().get(0);
+		Literal lit = charac.characteristicLiteral();
+		Enumeration enu = lit.getEnum();
+		PCMDataDictionary dict = (PCMDataDictionary) enu.eContainer();
+		List<Enumeration> enums = dict.getCharacteristicEnumerations();
+		List<CharacteristicType> characteristicTypes = dict.getCharacteristicTypes();
+
+		for (Enumeration e : enums) {
+			List<EnumCharacteristicType> types = new ArrayList<>();
+			for (CharacteristicType type : characteristicTypes) {
+				if (type instanceof EnumCharacteristicType ect) {
+					if (ect.getType().equals(e)) {
+						types.add(ect);
+					}
+				}
+			}
+
+			List<Literal> literals = e.getLiterals();
+			List<Label> tempLabels = new ArrayList<>();
+
+			for (Literal literal : literals) {
+				Label label = ddFactory.createLabel();
+				label.setEntityName(literal.getName());
+				label.setId(literal.getId());
+				tempLabels.add(label);
+				labels.add(label);
+			}
+
+			for (EnumCharacteristicType ect : types) {
+				LabelType labelType = ddFactory.createLabelType();
+				labelType.setEntityName(ect.getName());
+				labelType.setId(ect.getId());
+
+				labelTypes.add(labelType);
+
+				for (Label tempLabel : tempLabels) {
+					labelType.getLabel().add(tempLabel);
+				}
+			}
+		}
+
 		DataFlowDiagram dfd = dfdFactory.createDataFlowDiagram();
 
 		DFDDataFlowElementVisitor visitor = new DFDDataFlowElementVisitor();
@@ -58,49 +119,6 @@ public class DFDDrawingStrategy implements DrawingStrategy {
 				DataFlowElement element = node.getElement();
 
 				Node dfdNode = (Node) element.accept(visitor);
-
-				// NODE PROPERTIES
-
-				// Create the LiteralTypes and Literals if they do not exist already
-				for (DataFlowLiteral literal : node.getLiterals()) {
-					LabelType nodeLabelType = null;
-					for (LabelType labelType : labelTypes) {
-						if (labelType.getId().equals(literal.getTypeID())) {
-							nodeLabelType = labelType;
-						}
-					}
-
-					if (nodeLabelType == null) {
-						nodeLabelType = ddFactory.createLabelType();
-
-						nodeLabelType.setEntityName(literal.getTypeName());
-						nodeLabelType.setId(literal.getTypeID());
-
-						labelTypes.add(nodeLabelType);
-					}
-
-					Label nodeLabel = null;
-					for (Label label : labels) {
-						if (label.getId().equals(literal.getLiteralID())) {
-							nodeLabel = label;
-						}
-					}
-
-					if (nodeLabel == null) {
-						nodeLabel = ddFactory.createLabel();
-
-						nodeLabel.setId(literal.getLiteralID());
-						nodeLabel.setEntityName(literal.getLiteralName());
-
-						labels.add(nodeLabel);
-					}
-
-					if (!nodeLabelType.getLabel().contains(nodeLabel)) {
-						nodeLabelType.getLabel().add(nodeLabel);
-					}
-
-					dfdNode.getProperties().add(nodeLabel);
-				}
 
 				dfd.getNodes().add(dfdNode);
 
@@ -125,6 +143,9 @@ public class DFDDrawingStrategy implements DrawingStrategy {
 					}
 
 					for (VariableUsage usage : variableUsages) {
+						// JEDE CHARACTERISATION SCHEINT EIN ASSIGNMENT ZU SEIN
+						Assignment assignment = ddFactory.createAssignment();
+
 						List<VariableCharacterisation> characterisations = usage
 								.getVariableCharacterisation_VariableUsage();
 
@@ -146,10 +167,10 @@ public class DFDDrawingStrategy implements DrawingStrategy {
 									var z = necr.getNamedReference();
 									var i = 1;
 								} else if (b instanceof And and) {
-									
+
 									var i = 1;
 								} else if (b instanceof True t) {
-									
+
 								} else {
 									var i = 1;
 								}
